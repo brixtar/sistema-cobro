@@ -2,7 +2,8 @@
 
 Todo:
 - [x] Task 1: Servidor Backend e Inicialización de Base de Datos SQLite
-- [ ] Task 2: Implementación de Endpoints REST del Backend (CRUDs y Turnos)
+- [x] Task 2: Implementación de Endpoints REST del Backend (CRUDs y Turnos)
 - [ ] Task 3: Servidor WebSockets para Tickets y Migración de Frontend React
 
 Task 1: complete (commits ed5991b..e0317b2, review clean)
+Task 2: complete (commits 58653dd..1d993cb, review clean)
