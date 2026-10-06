@@ -1,10 +1,18 @@
 import express from 'express';
 import cors from 'cors';
+import http from 'http';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { db } from './database.js';
+import { inicializarWebSockets, transmitirMensaje } from './websocket.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../')));
 
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', database: 'connected' });
@@ -150,7 +158,78 @@ app.post('/api/ventas', (req, res) => {
     });
 });
 
+// Registrar Tickets Externos (balanzas) y transmitir por WebSockets
+app.post('/api/tickets', (req, res) => {
+    const { sucursalId, cajeroNombre, sector, total, items } = req.body;
+    db.serialize(() => {
+        db.run("BEGIN TRANSACTION");
+        db.run(`INSERT INTO cola_tickets (sucursalId, cajeroNombre, sector, fecha, total, estado) 
+                VALUES (?, ?, ?, datetime('now', 'localtime'), ?, 'pendiente')`,
+               [sucursalId, cajeroNombre, sector, total], function(err) {
+            if (err) {
+                db.run("ROLLBACK");
+                return res.status(500).json({ error: err.message });
+            }
+            const ticketId = this.lastID;
+            const stmt = db.prepare("INSERT INTO cola_ticket_items (ticketId, productoId, nombre, precio, cantidad) VALUES (?, ?, ?, ?, ?)");
+            items.forEach(item => {
+                stmt.run(ticketId, item.productoId, item.nombre, item.precio, item.cantidad);
+            });
+            stmt.finalize();
+
+            db.run("COMMIT", (err) => {
+                if (err) return res.status(500).json({ error: "Ticket transaction failed" });
+                
+                // Transmitir por WebSockets
+                const nuevoTicket = {
+                    id: ticketId,
+                    sucursalId,
+                    cajeroNombre,
+                    sector,
+                    total,
+                    items
+                };
+                transmitirMensaje({ type: 'NUEVO_TICKET', ticket: nuevoTicket });
+                res.json({ success: true, ticketId });
+            });
+        });
+    });
+});
+
+app.get('/api/tickets/pendiente/:cajeroNombre', (req, res) => {
+    const { cajeroNombre } = req.params;
+    db.all("SELECT * FROM cola_tickets WHERE cajeroNombre = ? AND estado = 'pendiente'", [cajeroNombre], (err, tickets) => {
+        if (err || !tickets) return res.json([]);
+        
+        let listadoCompletado = [];
+        let pending = tickets.length;
+        if (pending === 0) return res.json([]);
+
+        tickets.forEach(t => {
+            db.all("SELECT * FROM cola_ticket_items WHERE ticketId = ?", [t.id], (err, items) => {
+                t.items = items || [];
+                listadoCompletado.push(t);
+                pending--;
+                if (pending === 0) {
+                    res.json(listadoCompletado);
+                }
+            });
+        });
+    });
+});
+
+app.post('/api/tickets/procesar', (req, res) => {
+    const { id } = req.body;
+    db.run("UPDATE cola_tickets SET estado = 'procesado' WHERE id = ?", [id], (err) => {
+        if (err) return res.status(500).json({ error: err.message });
+        res.json({ success: true });
+    });
+});
+
+const server = http.createServer(app);
+inicializarWebSockets(server);
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Servidor de cobro corriendo en http://localhost:${PORT}`);
+server.listen(PORT, () => {
+    console.log(`Servidor HTTP + WebSockets corriendo en http://localhost:${PORT}`);
 });

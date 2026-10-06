@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <!-- Google Fonts Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -19,18 +21,23 @@
             --bg-card-hover: #1e253d;
             --border-color: rgba(255, 255, 255, 0.06);
             --border-hover: rgba(255, 255, 255, 0.12);
-            
+
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
-            
-            --color-primary: #6366f1; /* Indigo */
+
+            --color-primary: #6366f1;
+            /* Indigo */
             --color-primary-hover: #4f46e5;
-            --color-success: #10b981; /* Esmeralda */
+            --color-success: #10b981;
+            /* Esmeralda */
             --color-success-hover: #059669;
-            --color-warning: #f59e0b; /* Ámbar */
-            --color-danger: #f43f5e; /* Rosa/Rojo */
-            --color-info: #0ea5e9; /* Celeste */
+            --color-warning: #f59e0b;
+            /* Ámbar */
+            --color-danger: #f43f5e;
+            /* Rosa/Rojo */
+            --color-info: #0ea5e9;
+            /* Celeste */
 
             --font-main: 'Outfit', sans-serif;
             --radius-sm: 8px;
@@ -64,13 +71,16 @@
             width: 8px;
             height: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: var(--bg-body);
         }
+
         ::-webkit-scrollbar-thumb {
             background: var(--border-hover);
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: var(--color-primary);
         }
@@ -203,8 +213,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* --- COMPONENTES GLOBALES: TARJETAS Y GRID --- */
@@ -243,10 +260,21 @@
             background-color: var(--color-primary);
         }
 
-        .card-stat.success::after { background-color: var(--color-success); }
-        .card-stat.warning::after { background-color: var(--color-warning); }
-        .card-stat.danger::after { background-color: var(--color-danger); }
-        .card-stat.info::after { background-color: var(--color-info); }
+        .card-stat.success::after {
+            background-color: var(--color-success);
+        }
+
+        .card-stat.warning::after {
+            background-color: var(--color-warning);
+        }
+
+        .card-stat.danger::after {
+            background-color: var(--color-danger);
+        }
+
+        .card-stat.info::after {
+            background-color: var(--color-info);
+        }
 
         .stat-details h4 {
             color: var(--text-secondary);
@@ -273,10 +301,25 @@
             color: var(--color-primary);
         }
 
-        .card-stat.success .stat-icon { color: var(--color-success); background-color: rgba(16, 185, 129, 0.08); }
-        .card-stat.warning .stat-icon { color: var(--color-warning); background-color: rgba(245, 158, 11, 0.08); }
-        .card-stat.danger .stat-icon { color: var(--color-danger); background-color: rgba(244, 63, 94, 0.08); }
-        .card-stat.info .stat-icon { color: var(--color-info); background-color: rgba(14, 165, 233, 0.08); }
+        .card-stat.success .stat-icon {
+            color: var(--color-success);
+            background-color: rgba(16, 185, 129, 0.08);
+        }
+
+        .card-stat.warning .stat-icon {
+            color: var(--color-warning);
+            background-color: rgba(245, 158, 11, 0.08);
+        }
+
+        .card-stat.danger .stat-icon {
+            color: var(--color-danger);
+            background-color: rgba(244, 63, 94, 0.08);
+        }
+
+        .card-stat.info .stat-icon {
+            color: var(--color-info);
+            background-color: rgba(14, 165, 233, 0.08);
+        }
 
         /* --- ESTRUCTURA DE DOS COLUMNAS --- */
         .layout-split {
@@ -883,9 +926,18 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.15); box-shadow: 0 0 10px rgba(244, 63, 94, 0.6); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 10px rgba(244, 63, 94, 0.6);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* --- TABLAS Y LISTAS --- */
@@ -932,9 +984,20 @@
             display: inline-block;
         }
 
-        .badge.open { background-color: rgba(16, 185, 129, 0.12); color: var(--color-success); }
-        .badge.frozen { background-color: rgba(245, 158, 11, 0.12); color: var(--color-warning); }
-        .badge.audited { background-color: rgba(99, 102, 241, 0.12); color: var(--color-primary); }
+        .badge.open {
+            background-color: rgba(16, 185, 129, 0.12);
+            color: var(--color-success);
+        }
+
+        .badge.frozen {
+            background-color: rgba(245, 158, 11, 0.12);
+            color: var(--color-warning);
+        }
+
+        .badge.audited {
+            background-color: rgba(99, 102, 241, 0.12);
+            color: var(--color-primary);
+        }
 
         /* --- SIMULADOR DE API FLOTANTE --- */
         .api-simulator-toggle {
@@ -983,8 +1046,15 @@
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .sim-btn {
@@ -1040,8 +1110,15 @@
         }
 
         @keyframes scaleIn {
-            from { transform: scale(0.95); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .modal-title {
@@ -1098,7 +1175,7 @@
             width: 100%;
             margin: 0 auto;
             font-size: 0.78rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             line-height: 1.35;
         }
 
@@ -1134,9 +1211,12 @@
             body * {
                 visibility: hidden;
             }
-            .ticket-receipt, .ticket-receipt * {
+
+            .ticket-receipt,
+            .ticket-receipt * {
                 visibility: visible;
             }
+
             .ticket-receipt {
                 position: absolute;
                 left: 0;
@@ -1153,14 +1233,17 @@
                 transform: translateY(20px);
                 opacity: 0;
             }
+
             20% {
                 transform: translateY(0);
                 opacity: 1;
             }
+
             80% {
                 transform: translateY(-10px);
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-30px);
                 opacity: 0;
@@ -1168,6 +1251,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- HEADER PRINCIPAL -->
@@ -1195,7 +1279,8 @@
                     <!-- Opciones dinámicas -->
                 </select>
                 <!-- Globo de notificaciones de tickets de fiambrería para el cajero activo -->
-                <span class="notification-badge" id="cajaNotifBadge" style="display: none; position: relative; top: 0; right: 0; margin-left: 6px;">0</span>
+                <span class="notification-badge" id="cajaNotifBadge"
+                    style="display: none; position: relative; top: 0; right: 0; margin-left: 6px;">0</span>
             </div>
         </div>
     </header>
@@ -1242,17 +1327,24 @@
                 <!-- Columna Izquierda: Auditoría de Cajas y Turnos -->
                 <div class="panel-glass">
                     <div class="panel-header" style="flex-wrap: wrap; gap: 8px;">
-                        <h3 style="margin-right: auto;"><i data-lucide="list-checks" style="color: var(--color-primary);"></i> Auditoría de Cajas y Turnos</h3>
+                        <h3 style="margin-right: auto;"><i data-lucide="list-checks"
+                                style="color: var(--color-primary);"></i> Auditoría de Cajas y Turnos</h3>
                         <div class="role-selector" style="margin: 0; padding: 2px;">
-                            <button class="role-btn active" id="btnTabTurnosActivos" onclick="cambiarFiltroAuditoria('activos')" style="font-size:0.75rem; padding: 4px 8px;">Activos</button>
-                            <button class="role-btn" id="btnTabTurnosCerrados" onclick="cambiarFiltroAuditoria('cerrados')" style="font-size:0.75rem; padding: 4px 8px;">Cierres</button>
+                            <button class="role-btn active" id="btnTabTurnosActivos"
+                                onclick="cambiarFiltroAuditoria('activos')"
+                                style="font-size:0.75rem; padding: 4px 8px;">Activos</button>
+                            <button class="role-btn" id="btnTabTurnosCerrados"
+                                onclick="cambiarFiltroAuditoria('cerrados')"
+                                style="font-size:0.75rem; padding: 4px 8px;">Cierres</button>
                         </div>
-                        <button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;" onclick="exportarAuditoriaCSV()">
+                        <button class="btn-secondary"
+                            style="padding: 4px 8px; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;"
+                            onclick="exportarAuditoriaCSV()">
                             <i data-lucide="download" style="width: 12px; height: 12px;"></i> Exportar CSV
                         </button>
                         <span class="badge warning" id="turnoStatusBadge">Turno: -</span>
                     </div>
-                    
+
                     <div class="table-wrapper">
                         <table class="custom-table" id="tablaTurnos">
                             <thead>
@@ -1279,9 +1371,11 @@
                     <!-- Gráficos SVG -->
                     <div class="panel-glass">
                         <div class="panel-header">
-                            <h3><i data-lucide="pie-chart" style="color: var(--color-info);"></i> Métodos de Pago Hoy</h3>
+                            <h3><i data-lucide="pie-chart" style="color: var(--color-info);"></i> Métodos de Pago Hoy
+                            </h3>
                         </div>
-                        <div style="display: flex; justify-content: center; align-items: center; min-height: 180px;" id="chartContainer">
+                        <div style="display: flex; justify-content: center; align-items: center; min-height: 180px;"
+                            id="chartContainer">
                             <!-- SVG dinámico de la torta / barras de pago -->
                         </div>
                     </div>
@@ -1289,18 +1383,23 @@
                     <!-- Copias de Seguridad QR / JSON -->
                     <div class="panel-glass">
                         <div class="panel-header">
-                            <h3><i data-lucide="database-backup" style="color: var(--color-success);"></i> Respaldos y QR</h3>
+                            <h3><i data-lucide="database-backup" style="color: var(--color-success);"></i> Respaldos y
+                                QR</h3>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 12px;">
-                            <p style="font-size: 0.82rem; color: var(--text-secondary);">Descarga los datos del negocio en un archivo JSON o transfiérelos mediante código QR.</p>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary);">Descarga los datos del negocio
+                                en un archivo JSON o transfiérelos mediante código QR.</p>
                             <div style="display: flex; gap: 8px;">
-                                <button class="btn-secondary" style="flex: 1; padding: 8px;" onclick="exportarBackupJSON()">
+                                <button class="btn-secondary" style="flex: 1; padding: 8px;"
+                                    onclick="exportarBackupJSON()">
                                     <i data-lucide="download" style="width: 14px; height: 14px;"></i> Guardar JSON
                                 </button>
-                                <button class="btn-secondary" style="flex: 1; padding: 8px;" onclick="document.getElementById('importFile').click()">
+                                <button class="btn-secondary" style="flex: 1; padding: 8px;"
+                                    onclick="document.getElementById('importFile').click()">
                                     <i data-lucide="upload" style="width: 14px; height: 14px;"></i> Cargar JSON
                                 </button>
-                                <input type="file" id="importFile" style="display: none;" onchange="importarBackupJSON(event)">
+                                <input type="file" id="importFile" style="display: none;"
+                                    onchange="importarBackupJSON(event)">
                             </div>
                             <button class="btn-primary" style="width: 100%;" onclick="abrirModalQRBackup()">
                                 <i data-lucide="qr-code" style="width: 16px; height: 16px;"></i> Generar QR de Respaldo
@@ -1316,7 +1415,8 @@
                 <div class="panel-glass">
                     <div class="panel-header">
                         <h3><i data-lucide="package" style="color: var(--color-primary);"></i> CRUD Productos</h3>
-                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="abrirModalProducto()">+ Nuevo</button>
+                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;"
+                            onclick="abrirModalProducto()">+ Nuevo</button>
                     </div>
                     <div class="table-wrapper" style="max-height: 250px; overflow-y: auto;">
                         <table class="custom-table" id="tablaCRUDProductos">
@@ -1340,7 +1440,8 @@
                 <div class="panel-glass">
                     <div class="panel-header">
                         <h3><i data-lucide="users" style="color: var(--color-success);"></i> CRUD Clientes (Fiado)</h3>
-                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="abrirModalCliente()">+ Nuevo</button>
+                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;"
+                            onclick="abrirModalCliente()">+ Nuevo</button>
                     </div>
                     <div class="table-wrapper" style="max-height: 250px; overflow-y: auto;">
                         <table class="custom-table" id="tablaCRUDClientes">
@@ -1364,7 +1465,8 @@
                 <div class="panel-glass">
                     <div class="panel-header">
                         <h3><i data-lucide="building-2" style="color: var(--color-info);"></i> CRUD Sucursales</h3>
-                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="abrirModalSucursal()">+ Nueva</button>
+                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;"
+                            onclick="abrirModalSucursal()">+ Nueva</button>
                     </div>
                     <div class="table-wrapper" style="max-height: 250px; overflow-y: auto;">
                         <table class="custom-table" id="tablaCRUDSucursales">
@@ -1386,7 +1488,8 @@
                 <div class="panel-glass">
                     <div class="panel-header">
                         <h3><i data-lucide="contact" style="color: var(--color-primary);"></i> CRUD Personal</h3>
-                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="abrirModalPersonal()">+ Nuevo</button>
+                        <button class="btn-primary" style="padding: 6px 12px; font-size: 0.8rem;"
+                            onclick="abrirModalPersonal()">+ Nuevo</button>
                     </div>
                     <div class="table-wrapper" style="max-height: 250px; overflow-y: auto;">
                         <table class="custom-table" id="tablaCRUDPersonal">
@@ -1415,10 +1518,15 @@
                     <div class="pos-search-bar">
                         <div class="input-search-wrapper">
                             <i data-lucide="search" style="width: 18px; height: 18px;"></i>
-                            <input type="text" class="input-search" id="buscarProductoInput" placeholder="Escribe el nombre o escanea código de barras del producto..." oninput="filtrarProductos(this.value)">
+                            <input type="text" class="input-search" id="buscarProductoInput"
+                                placeholder="Escribe el nombre o escanea código de barras del producto..."
+                                oninput="filtrarProductos(this.value)">
                         </div>
-                        <button class="btn-secondary" style="padding: 12px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md);" onclick="abrirModalEscaner()" title="Simulador de Escáner Láser">
-                            <i data-lucide="scan-line" style="width: 18px; height: 18px; color: var(--color-success);"></i>
+                        <button class="btn-secondary"
+                            style="padding: 12px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md);"
+                            onclick="abrirModalEscaner()" title="Simulador de Escáner Láser">
+                            <i data-lucide="scan-line"
+                                style="width: 18px; height: 18px; color: var(--color-success);"></i>
                         </button>
                         <button class="btn-warning" onclick="congelarCajaTurnoActivo()">
                             <i data-lucide="snowflake" style="width: 16px; height: 16px;"></i> Congelar Caja
@@ -1426,14 +1534,19 @@
                     </div>
 
                     <!-- Fila de Tickets Externos Pendientes (Mensajes de Sectores) -->
-                    <div id="sectorTicketsPanel" style="display: none; background-color: rgba(99, 102, 241, 0.08); border: 1px solid var(--color-primary); border-radius: var(--radius-md); padding: 12px; flex-direction: column; gap: 8px;">
+                    <div id="sectorTicketsPanel"
+                        style="display: none; background-color: rgba(99, 102, 241, 0.08); border: 1px solid var(--color-primary); border-radius: var(--radius-md); padding: 12px; flex-direction: column; gap: 8px;">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 700; color: var(--color-primary); font-size: 0.88rem; display: flex; align-items: center; gap: 6px;">
-                                <i data-lucide="bell-ring" style="width: 16px; height: 16px; animation: pulse 1.5s infinite;"></i> Tickets de Fiambrería / Sectores Pendientes
+                            <span
+                                style="font-weight: 700; color: var(--color-primary); font-size: 0.88rem; display: flex; align-items: center; gap: 6px;">
+                                <i data-lucide="bell-ring"
+                                    style="width: 16px; height: 16px; animation: pulse 1.5s infinite;"></i> Tickets de
+                                Fiambrería / Sectores Pendientes
                             </span>
                             <span class="badge open" id="sectorTicketsCount">1 Pendientes</span>
                         </div>
-                        <div style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;" id="sectorTicketsContainer">
+                        <div style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;"
+                            id="sectorTicketsContainer">
                             <!-- Botones rápidos de ticket -->
                         </div>
                     </div>
@@ -1452,8 +1565,10 @@
                 <!-- Carrito de cobro y total -->
                 <div class="pos-checkout">
                     <div class="panel-header" style="margin-bottom: 0; padding-bottom: 8px;">
-                        <h3><i data-lucide="shopping-cart" style="color: var(--color-primary);"></i> Carrito de Cobro</h3>
-                        <button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;" onclick="vaciarCarrito()">Limpiar</button>
+                        <h3><i data-lucide="shopping-cart" style="color: var(--color-primary);"></i> Carrito de Cobro
+                        </h3>
+                        <button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;"
+                            onclick="vaciarCarrito()">Limpiar</button>
                     </div>
 
                     <!-- Asignación de Cliente y Límites -->
@@ -1464,7 +1579,9 @@
                                     <!-- Carga dinámica de clientes -->
                                 </select>
                             </div>
-                            <button id="btnCobrarDeudaPOS" class="btn-success" style="padding: 0 12px; border-radius: var(--radius-sm); font-size: 0.8rem; display: none; align-items: center; gap: 4px;" onclick="abrirModalCobroDeuda()">
+                            <button id="btnCobrarDeudaPOS" class="btn-success"
+                                style="padding: 0 12px; border-radius: var(--radius-sm); font-size: 0.8rem; display: none; align-items: center; gap: 4px;"
+                                onclick="abrirModalCobroDeuda()">
                                 <i data-lucide="hand-coins" style="width: 14px; height: 14px;"></i> Cobrar Deuda
                             </button>
                         </div>
@@ -1491,9 +1608,11 @@
                         </div>
 
                         <!-- Métodos de pago -->
-                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Método de Cobro:</span>
+                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Método de
+                            Cobro:</span>
                         <div class="payment-methods-grid">
-                            <button class="btn-payment-method active" id="payMethodEfectivo" onclick="setMetodoPago('efectivo')">
+                            <button class="btn-payment-method active" id="payMethodEfectivo"
+                                onclick="setMetodoPago('efectivo')">
                                 <i data-lucide="banknote" style="width: 18px; height: 18px;"></i> Efectivo
                             </button>
                             <button class="btn-payment-method" id="payMethodVirtual" onclick="setMetodoPago('virtual')">
@@ -1502,7 +1621,8 @@
                             <button class="btn-payment-method" id="payMethodTarjeta" onclick="setMetodoPago('tarjeta')">
                                 <i data-lucide="credit-card" style="width: 18px; height: 18px;"></i> Tarjeta (Posnet)
                             </button>
-                            <button class="btn-payment-method" id="payMethodCorriente" onclick="setMetodoPago('corriente')">
+                            <button class="btn-payment-method" id="payMethodCorriente"
+                                onclick="setMetodoPago('corriente')">
                                 <i data-lucide="notebook-tabs" style="width: 18px; height: 18px;"></i> Fiar (Cta. Cte.)
                             </button>
                         </div>
@@ -1534,11 +1654,14 @@
                 <div class="panel-glass">
                     <div class="panel-header">
                         <h3><i data-lucide="search" style="color: var(--color-primary);"></i> Consulta de Precios</h3>
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">Uso exclusivo para empleados (No abre caja)</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Uso exclusivo para empleados (No abre
+                            caja)</span>
                     </div>
                     <div class="input-search-wrapper" style="margin-bottom: 16px;">
                         <i data-lucide="search" style="width: 18px; height: 18px;"></i>
-                        <input type="text" class="input-search" id="sectorPriceCheckerSearch" placeholder="Escribe el nombre o código de barras para buscar precio..." oninput="buscarPrecioSector(this.value)">
+                        <input type="text" class="input-search" id="sectorPriceCheckerSearch"
+                            placeholder="Escribe el nombre o código de barras para buscar precio..."
+                            oninput="buscarPrecioSector(this.value)">
                     </div>
                     <div class="table-wrapper" style="max-height: 400px; overflow-y: auto;">
                         <table class="custom-table" id="tablaPriceCheckerSector">
@@ -1566,10 +1689,11 @@
                         <span class="scale-unit">BÁSCULA DIGITAL</span>
                         <div class="scale-number" id="balanzaPesoDisplay">0.000</div>
                         <span class="scale-unit">KILOGRAMOS</span>
-                        
+
                         <!-- Barra de deslizamiento simulador de peso -->
-                        <input type="range" class="scale-slider" min="0.05" max="3" step="0.005" value="0.25" id="balanzaSlider" oninput="cambiarPesoSimulado(this.value)">
-                        
+                        <input type="range" class="scale-slider" min="0.05" max="3" step="0.005" value="0.25"
+                            id="balanzaSlider" oninput="cambiarPesoSimulado(this.value)">
+
                         <div class="scale-product-details" id="balanzaDetalleArticulo">
                             Selecciona un producto del catálogo para pesarlo
                         </div>
@@ -1578,10 +1702,14 @@
                     <!-- Destinatario de Caja / Cajero Cercano -->
                     <div class="panel-glass" style="padding: 16px;">
                         <div class="form-group" style="margin-bottom: 0;">
-                            <label style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 6px;">
-                                <i data-lucide="user-check" style="width: 14px; height: 14px; color: var(--color-primary);"></i> Caja Destinataria (Cajero Activo):
+                            <label
+                                style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                <i data-lucide="user-check"
+                                    style="width: 14px; height: 14px; color: var(--color-primary);"></i> Caja
+                                Destinataria (Cajero Activo):
                             </label>
-                            <select class="form-control" id="formSectorDestinatarioCajero" style="margin-top: 8px; width: 100%;">
+                            <select class="form-control" id="formSectorDestinatarioCajero"
+                                style="margin-top: 8px; width: 100%;">
                                 <!-- Dinámico: Lista de cajeros activos -->
                             </select>
                         </div>
@@ -1612,38 +1740,49 @@
     </button>
 
     <div class="api-simulator-panel" id="simPanel">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
-            <span style="font-weight: 700; font-size: 0.9rem; color: var(--color-primary);">Simulador de Entrada de Datos</span>
-            <i data-lucide="x" style="width: 16px; height: 16px; cursor: pointer; color: var(--text-muted);" onclick="toggleSimuladorPanel()"></i>
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+            <span style="font-weight: 700; font-size: 0.9rem; color: var(--color-primary);">Simulador de Entrada de
+                Datos</span>
+            <i data-lucide="x" style="width: 16px; height: 16px; cursor: pointer; color: var(--text-muted);"
+                onclick="toggleSimuladorPanel()"></i>
         </div>
 
         <!-- Simular Mercado Pago Webhook -->
         <div style="display: flex; flex-direction: column; gap: 6px;">
-            <span style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 600;">Mercado Pago (Simulado):</span>
+            <span style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 600;">Mercado Pago
+                (Simulado):</span>
             <button class="sim-btn" onclick="simularPagoMercadoPagoCompleto()">
-                <i data-lucide="phone-outgoing" style="width: 14px; height: 14px; color: var(--color-success);"></i> Simular Notificación Pago QR
+                <i data-lucide="phone-outgoing" style="width: 14px; height: 14px; color: var(--color-success);"></i>
+                Simular Notificación Pago QR
             </button>
         </div>
 
         <!-- Simular Posnet Card -->
         <div style="display: flex; flex-direction: column; gap: 6px;">
-            <span style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 600;">Terminal Posnet (Tarjeta):</span>
+            <span style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 600;">Terminal Posnet
+                (Tarjeta):</span>
             <button class="sim-btn" onclick="simularPagoPosnetTarjetaCompleto()">
-                <i data-lucide="nfc" style="width: 14px; height: 14px; color: var(--color-info);"></i> Simular Pase de Tarjeta
+                <i data-lucide="nfc" style="width: 14px; height: 14px; color: var(--color-info);"></i> Simular Pase de
+                Tarjeta
             </button>
         </div>
 
         <!-- Simular Mensajería de Fiambrería -->
         <div style="display: flex; flex-direction: column; gap: 6px;">
-            <span style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 600;">Fiambrería / Sectores:</span>
+            <span style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 600;">Fiambrería /
+                Sectores:</span>
             <button class="sim-btn" onclick="simularTicketRapidoDesdeFiambreria()">
-                <i data-lucide="milk" style="width: 14px; height: 14px; color: var(--color-warning);"></i> Simular Envío de Fiambrería
+                <i data-lucide="milk" style="width: 14px; height: 14px; color: var(--color-warning);"></i> Simular Envío
+                de Fiambrería
             </button>
         </div>
 
         <!-- Estado del Agente de WhatsApp -->
-        <div id="whatsappAgentStatusBox" style="display: none; padding: 10px; background-color: rgba(16, 185, 129, 0.06); border: 1px solid var(--color-success); border-radius: var(--radius-sm); font-size: 0.75rem;">
-            <div style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-success); margin-bottom: 4px;">
+        <div id="whatsappAgentStatusBox"
+            style="display: none; padding: 10px; background-color: rgba(16, 185, 129, 0.06); border: 1px solid var(--color-success); border-radius: var(--radius-sm); font-size: 0.75rem;">
+            <div
+                style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-success); margin-bottom: 4px;">
                 <i data-lucide="check" style="width: 14px; height: 14px;"></i> Agente WhatsApp (API Bot)
             </div>
             <p id="whatsappAgentStatusText" style="color: var(--text-secondary);">Inactivo</p>
@@ -1656,7 +1795,8 @@
     <!-- Modal: Nuevo/Editar Producto -->
     <div class="modal-overlay" id="modalProducto">
         <div class="modal-box">
-            <h3 class="modal-title"><i data-lucide="plus-circle" style="color: var(--color-primary);"></i> Carga de Producto</h3>
+            <h3 class="modal-title"><i data-lucide="plus-circle" style="color: var(--color-primary);"></i> Carga de
+                Producto</h3>
             <div class="form-group">
                 <label>Nombre del Producto:</label>
                 <input type="text" class="form-control" id="formProdNombre" placeholder="Ej. Queso Barra">
@@ -1688,7 +1828,8 @@
     <!-- Modal: Nuevo Cliente -->
     <div class="modal-overlay" id="modalCliente">
         <div class="modal-box">
-            <h3 class="modal-title"><i data-lucide="user-plus" style="color: var(--color-success);"></i> Carga de Cliente</h3>
+            <h3 class="modal-title"><i data-lucide="user-plus" style="color: var(--color-success);"></i> Carga de
+                Cliente</h3>
             <div class="form-group">
                 <label>Nombre Completo:</label>
                 <input type="text" class="form-control" id="formCliNombre" placeholder="Ej. Pedro Picapiedra">
@@ -1730,8 +1871,10 @@
     <!-- Modal: Iniciar Turno (Cajero) -->
     <div class="modal-overlay" id="modalIniciarTurno">
         <div class="modal-box">
-            <h3 class="modal-title"><i data-lucide="key" style="color: var(--color-primary);"></i> Apertura de Turno</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 14px;">Ingresa el nombre del cajero para abrir una nueva jornada en esta sucursal.</p>
+            <h3 class="modal-title"><i data-lucide="key" style="color: var(--color-primary);"></i> Apertura de Turno
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 14px;">Ingresa el nombre del
+                cajero para abrir una nueva jornada en esta sucursal.</p>
             <div class="form-group">
                 <label>Nombre del Cajero:</label>
                 <input type="text" class="form-control" id="formTurnoCajero" placeholder="Ej. Carlos">
@@ -1749,16 +1892,23 @@
     <!-- Modal: Auditoría de Arqueo (Admin) -->
     <div class="modal-overlay" id="modalAuditTurno">
         <div class="modal-box">
-            <h3 class="modal-title"><i data-lucide="file-check" style="color: var(--color-warning);"></i> Arqueo de Caja y Cierre</h3>
-            <div style="background-color: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px; margin-bottom: 16px; font-size: 0.85rem; display: flex; flex-direction: column; gap: 6px;">
-                <div class="ticket-flex"><span>Cajero:</span><span id="auditCajeroNombre" style="font-weight: 700;">Carlos</span></div>
-                <div class="ticket-flex"><span>Monto Teórico Efectivo:</span><span id="auditEfectivoTeorico" style="font-weight: 700;">$0.00</span></div>
-                <div class="ticket-flex"><span>Monto Teórico Mercado Pago:</span><span id="auditVirtualTeorico" style="font-weight: 700;">$0.00</span></div>
-                <div class="ticket-flex"><span>Monto Teórico Tarjetas:</span><span id="auditTarjetaTeorico" style="font-weight: 700;">$0.00</span></div>
+            <h3 class="modal-title"><i data-lucide="file-check" style="color: var(--color-warning);"></i> Arqueo de Caja
+                y Cierre</h3>
+            <div
+                style="background-color: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px; margin-bottom: 16px; font-size: 0.85rem; display: flex; flex-direction: column; gap: 6px;">
+                <div class="ticket-flex"><span>Cajero:</span><span id="auditCajeroNombre"
+                        style="font-weight: 700;">Carlos</span></div>
+                <div class="ticket-flex"><span>Monto Teórico Efectivo:</span><span id="auditEfectivoTeorico"
+                        style="font-weight: 700;">$0.00</span></div>
+                <div class="ticket-flex"><span>Monto Teórico Mercado Pago:</span><span id="auditVirtualTeorico"
+                        style="font-weight: 700;">$0.00</span></div>
+                <div class="ticket-flex"><span>Monto Teórico Tarjetas:</span><span id="auditTarjetaTeorico"
+                        style="font-weight: 700;">$0.00</span></div>
             </div>
             <div class="form-group">
                 <label>Monto Físico Efectivo Contado ($):</label>
-                <input type="number" class="form-control" id="formAuditFisicoReal" placeholder="Ingresa lo que hay realmente en caja">
+                <input type="number" class="form-control" id="formAuditFisicoReal"
+                    placeholder="Ingresa lo que hay realmente en caja">
             </div>
             <div class="modal-footer">
                 <button class="btn-secondary" onclick="cerrarModales()">Cancelar</button>
@@ -1769,26 +1919,35 @@
 
     <!-- Modal: Ticket Térmico Listo e Impresión -->
     <div class="modal-overlay" id="modalImpresionTicket">
-        <div class="modal-box" style="max-width: 400px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;">
-            <h3 class="modal-title"><i data-lucide="printer" style="color: var(--color-success);"></i> Venta Registrada con Éxito</h3>
-            
-            <div style="flex: 1; overflow-y: auto; padding: 4px; display: flex; justify-content: center;" id="ticketVisorPrint">
+        <div class="modal-box"
+            style="max-width: 400px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;">
+            <h3 class="modal-title"><i data-lucide="printer" style="color: var(--color-success);"></i> Venta Registrada
+                con Éxito</h3>
+
+            <div style="flex: 1; overflow-y: auto; padding: 4px; display: flex; justify-content: center;"
+                id="ticketVisorPrint">
                 <!-- Se inyecta la plantilla ticket-receipt -->
             </div>
 
             <!-- Redes de envío rápido -->
-            <div style="margin-top: 14px; border-top: 1px solid var(--border-color); padding-top: 14px; display: flex; flex-direction: column; gap: 8px;">
+            <div
+                style="margin-top: 14px; border-top: 1px solid var(--border-color); padding-top: 14px; display: flex; flex-direction: column; gap: 8px;">
                 <div class="form-group" style="margin-bottom: 0;">
                     <label>Enviar por WhatsApp:</label>
                     <div style="display: flex; gap: 6px;">
-                        <input type="text" class="form-control" style="flex: 1;" id="formWhatsAppNumber" placeholder="Número de Celular">
-                        <button class="btn-success-raw" style="background-color: var(--color-success); border: none; padding: 10px; border-radius: 8px; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="enviarTicketWhatsAppDirectoText()">
+                        <input type="text" class="form-control" style="flex: 1;" id="formWhatsAppNumber"
+                            placeholder="Número de Celular">
+                        <button class="btn-success-raw"
+                            style="background-color: var(--color-success); border: none; padding: 10px; border-radius: 8px; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center;"
+                            onclick="enviarTicketWhatsAppDirectoText()">
                             <i data-lucide="send-to-back" style="width: 16px; height: 16px;"></i>
                         </button>
                     </div>
                 </div>
-                <button class="btn-secondary" style="font-size: 0.8rem; width: 100%; margin-top: 4px;" onclick="enviarTicketWhatsAppPDFSimulado()">
-                    <i data-lucide="bot" style="width: 14px; height: 14px; color: var(--color-success);"></i> Enviar PDF por Agente de WhatsApp
+                <button class="btn-secondary" style="font-size: 0.8rem; width: 100%; margin-top: 4px;"
+                    onclick="enviarTicketWhatsAppPDFSimulado()">
+                    <i data-lucide="bot" style="width: 14px; height: 14px; color: var(--color-success);"></i> Enviar PDF
+                    por Agente de WhatsApp
                 </button>
             </div>
 
@@ -1802,8 +1961,10 @@
     <!-- Modal: QR de Respaldo -->
     <div class="modal-overlay" id="modalQRBackup">
         <div class="modal-box" style="max-width: 380px; text-align: center;">
-            <h3 class="modal-title" style="justify-content: center;"><i data-lucide="qr-code" style="color: var(--color-primary);"></i> QR de Respaldo de Datos</h3>
-            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 12px;">Escanea este código QR con otro celular para transferir toda tu base de datos local al instante.</p>
+            <h3 class="modal-title" style="justify-content: center;"><i data-lucide="qr-code"
+                    style="color: var(--color-primary);"></i> QR de Respaldo de Datos</h3>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 12px;">Escanea este código QR con
+                otro celular para transferir toda tu base de datos local al instante.</p>
             <div id="qrBackupPlaceholderContainer">
                 <!-- SVG de código QR simulado -->
             </div>
@@ -1816,7 +1977,8 @@
     <!-- Modal: Nuevo Personal (Cajero / Empleado) -->
     <div class="modal-overlay" id="modalPersonal">
         <div class="modal-box">
-            <h3 class="modal-title"><i data-lucide="user-plus" style="color: var(--color-primary);"></i> Carga de Personal</h3>
+            <h3 class="modal-title"><i data-lucide="user-plus" style="color: var(--color-primary);"></i> Carga de
+                Personal</h3>
             <div class="form-group">
                 <label>Nombre Completo:</label>
                 <input type="text" class="form-control" id="formPersNombre" placeholder="Ej. Gisela">
@@ -1841,17 +2003,22 @@
     <!-- Modal: Registrar Cobro de Deuda -->
     <div class="modal-overlay" id="modalCobroDeuda">
         <div class="modal-box">
-            <h3 class="modal-title"><i data-lucide="hand-coins" style="color: var(--color-success);"></i> Registrar Cobro de Deuda</h3>
-            <div style="background-color: rgba(0, 0, 0, 0.2); padding: 12px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--border-color);">
-                <span id="cobroDeudaClientName" style="font-weight: 700; font-size: 1.05rem; display: block; margin-bottom: 4px;">Cliente: -</span>
-                <span id="cobroDeudaClientBalance" style="color: var(--color-danger); font-weight: 600;">Deuda Actual: $0.00</span>
+            <h3 class="modal-title"><i data-lucide="hand-coins" style="color: var(--color-success);"></i> Registrar
+                Cobro de Deuda</h3>
+            <div
+                style="background-color: rgba(0, 0, 0, 0.2); padding: 12px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--border-color);">
+                <span id="cobroDeudaClientName"
+                    style="font-weight: 700; font-size: 1.05rem; display: block; margin-bottom: 4px;">Cliente: -</span>
+                <span id="cobroDeudaClientBalance" style="color: var(--color-danger); font-weight: 600;">Deuda Actual:
+                    $0.00</span>
             </div>
-            
+
             <div class="form-group">
                 <label>Monto a Abonar ($):</label>
-                <input type="number" class="form-control" id="formCobroDeudaMonto" placeholder="Ej. 3000" min="1" step="any">
+                <input type="number" class="form-control" id="formCobroDeudaMonto" placeholder="Ej. 3000" min="1"
+                    step="any">
             </div>
-            
+
             <div class="form-group">
                 <label>Método de Pago:</label>
                 <select class="form-control" id="formCobroDeudaMetodo">
@@ -1860,7 +2027,7 @@
                     <option value="tarjeta">Tarjeta (Posnet)</option>
                 </select>
             </div>
-            
+
             <div class="modal-footer">
                 <button class="btn-secondary" onclick="cerrarModales()">Cancelar</button>
                 <button class="btn-success" onclick="procesarCobroDeuda()">Confirmar Pago</button>
@@ -1871,15 +2038,18 @@
     <!-- Modal: Simulador de Escáner de Código de Barras -->
     <div class="modal-overlay" id="modalEscaner">
         <div class="modal-box" style="max-width: 500px;">
-            <h3 class="modal-title"><i data-lucide="scan-barcode" style="color: var(--color-success);"></i> Simulador de Escáner Láser</h3>
+            <h3 class="modal-title"><i data-lucide="scan-barcode" style="color: var(--color-success);"></i> Simulador de
+                Escáner Láser</h3>
             <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 16px;">
-                Haz clic en cualquier producto para simular una lectura rápida con el lector láser físico de mano. Escucharás el pitido de confirmación y el producto se sumará al instante.
+                Haz clic en cualquier producto para simular una lectura rápida con el lector láser físico de mano.
+                Escucharás el pitido de confirmación y el producto se sumará al instante.
             </p>
-            
-            <div class="products-grid" id="productosEscanerGrid" style="max-height: 350px; overflow-y: auto; grid-template-columns: 1fr 1fr; gap: 12px; padding: 4px;">
+
+            <div class="products-grid" id="productosEscanerGrid"
+                style="max-height: 350px; overflow-y: auto; grid-template-columns: 1fr 1fr; gap: 12px; padding: 4px;">
                 <!-- Cargado dinámicamente -->
             </div>
-            
+
             <div class="modal-footer">
                 <button class="btn-primary" onclick="cerrarModales()">Cerrar Escáner</button>
             </div>
@@ -1892,7 +2062,6 @@
         // --- BASE DE DATOS LOCAL (STORE) ---
         class Store {
             constructor() {
-                this.dbName = "sistema_cobros_data";
                 this.state = {
                     sucursalActiva: 1,
                     rolActivo: 'admin',
@@ -1906,93 +2075,63 @@
                     ventas: [],
                     colaTickets: []
                 };
-                this.load();
-                if (this.state.sucursales.length === 0) {
-                    this.seed();
-                }
+                const usr = sessionStorage.getItem("usuarioActivo");
+                if (usr) this.state.usuarioActivo = usr;
+                const rol = sessionStorage.getItem("rolActivo");
+                if (rol) this.state.rolActivo = rol;
+                const suc = sessionStorage.getItem("sucursalActiva");
+                if (suc) this.state.sucursalActiva = parseInt(suc);
+
+                this.initWebSocket();
             }
 
-            load() {
-                const stored = localStorage.getItem(this.dbName);
-                if (stored) {
-                    try {
-                        this.state = JSON.parse(stored);
-                    } catch (e) {
-                        console.error("Error cargando base de datos", e);
+            async syncData() {
+                try {
+                    const sucursales = await fetch('http://localhost:5000/api/sucursales').then(r => r.json());
+                    const clientes = await fetch('http://localhost:5000/api/clientes').then(r => r.json());
+                    const inventario = await fetch('http://localhost:5000/api/inventario').then(r => r.json());
+                    const turnos = await fetch('http://localhost:5000/api/turnos').then(r => r.json());
+
+                    this.state.sucursales = sucursales;
+                    this.state.clientes = clientes;
+                    this.state.inventario = inventario;
+                    this.state.turnos = turnos;
+
+                    if (this.state.usuarioActivo !== 'admin') {
+                        const name = this.state.usuarioActivo.startsWith('cajero:') ? this.state.usuarioActivo.split(':')[1] : null;
+                        if (name) {
+                            const pendingTickets = await fetch(`http://localhost:5000/api/tickets/pendiente/${name}`).then(r => r.json());
+                            this.state.colaTickets = pendingTickets;
+                        }
                     }
+                } catch (e) {
+                    console.error("Error al sincronizar con el backend:", e);
                 }
             }
 
             save() {
-                localStorage.setItem(this.dbName, JSON.stringify(this.state));
+                sessionStorage.setItem("usuarioActivo", this.state.usuarioActivo);
+                sessionStorage.setItem("rolActivo", this.state.rolActivo);
+                sessionStorage.setItem("sucursalActiva", this.state.sucursalActiva);
             }
 
-            seed() {
-                this.state.sucursales = [
-                    { id: 1, nombre: "Sucursal Centro", direccion: "Av. Avellaneda 450" },
-                    { id: 2, nombre: "Sucursal Oeste", direccion: "Av. Aconquija 1820" }
-                ];
-
-                this.state.cajeros = [
-                    { id: 1, nombre: "Carlos", activo: true },
-                    { id: 2, nombre: "Ana", activo: true },
-                    { id: 3, nombre: "Luis", activo: true }
-                ];
-
-                this.state.empleados = [
-                    { id: 1, nombre: "Ramiro (Fiambrería)", sector: "Fiambrería" },
-                    { id: 2, nombre: "Lucas (Almacén)", sector: "Almacén" },
-                    { id: 3, nombre: "Gisela (Otros)", sector: "Otros" }
-                ];
-
-                this.state.clientes = [
-                    { id: 1, nombre: "Consumidor Final", telefono: "", limiteCredito: 0, saldo: 0 },
-                    { id: 2, nombre: "Carlos Gómez", telefono: "+549381123456", limiteCredito: 15000, saldo: -4500 },
-                    { id: 3, nombre: "María Rodríguez", telefono: "+549381654321", limiteCredito: 30000, saldo: 0 },
-                    { id: 4, nombre: "Juan Pérez", telefono: "+549381789012", limiteCredito: 6000, saldo: -5800 },
-                    { id: 5, nombre: "Sofía Martínez", telefono: "+549381345678", limiteCredito: 10000, saldo: 1500 }
-                ];
-
-                this.state.inventario = [
-                    // Fiambrería
-                    { id: 1, nombre: "Jamón Cocido Lario (Kg)", codigo: "101", precio: 12000, sector: "Fiambrería" },
-                    { id: 2, nombre: "Queso Barra Tybo (Kg)", codigo: "102", precio: 9500, sector: "Fiambrería" },
-                    { id: 3, nombre: "Salamín Picado Fino (u)", codigo: "103", precio: 2500, sector: "Fiambrería" },
-                    { id: 4, nombre: "Bondiola Fraccionada (Kg)", codigo: "104", precio: 18000, sector: "Fiambrería" },
-                    // Almacén
-                    { id: 5, nombre: "Yerba Playadito 1Kg", codigo: "201", precio: 4500, sector: "Almacén" },
-                    { id: 6, fontname: "Leche Entera La Serenísima 1L", nombre: "Leche Entera La Serenísima 1L", codigo: "202", precio: 1500, sector: "Almacén" },
-                    { id: 7, nombre: "Azúcar Ledesma 1Kg", codigo: "203", precio: 1800, sector: "Almacén" },
-                    { id: 8, nombre: "Gaseosa Coca Cola 2.25L", codigo: "204", precio: 2800, sector: "Almacén" },
-                    // Carnicería
-                    { id: 9, nombre: "Vacío de Novillo (Kg)", codigo: "301", precio: 11000, sector: "Carnicería" },
-                    { id: 10, nombre: "Asado de Tira (Kg)", codigo: "302", precio: 9800, sector: "Carnicería" }
-                ];
-
-                // Turno inicial abierto de ejemplo
-                this.state.turnos = [
-                    {
-                        id: 1,
-                        sucursalId: 1,
-                        cajeroNombre: "Carlos",
-                        inicio: new Date().toLocaleString(),
-                        fin: "",
-                        estado: 'abierto',
-                        saldoInicial: 5000,
-                        saldoEfectivoTeorico: 5000,
-                        saldoVirtualTeorico: 0,
-                        saldoTarjetaTeorico: 0,
-                        saldoEfectivoReal: 0,
-                        saldoVirtualReal: 0,
-                        saldoTarjetaReal: 0,
-                        discrepanciaEfectivo: 0,
-                        notas: ""
+            initWebSocket() {
+                const ws = new WebSocket(`ws://${window.location.hostname}:5000`);
+                ws.onmessage = (event) => {
+                    const msg = JSON.parse(event.data);
+                    if (msg.type === 'NUEVO_TICKET') {
+                        const ticket = msg.ticket;
+                        const activeName = this.state.usuarioActivo.startsWith('cajero:') ? this.state.usuarioActivo.split(':')[1] : null;
+                        if (activeName && ticket.cajeroNombre === activeName && ticket.sucursalId === this.state.sucursalActiva) {
+                            this.state.colaTickets.push(ticket);
+                            reproducirSonidoBeep();
+                            actualizarBuzonTicketsSectores();
+                        }
                     }
-                ];
-
-                this.state.ventas = [];
-                this.state.colaTickets = [];
-                this.save();
+                };
+                ws.onclose = () => {
+                    setTimeout(() => this.initWebSocket(), 5000);
+                };
             }
         }
 
@@ -2004,8 +2143,9 @@
         let productoSeleccionadoSector = null; // Para báscula
         let pesoSimuladoBalanza = 0.25;
 
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", async () => {
             lucide.createIcons();
+            await store.syncData();
             cargarSucursalesHeader();
             cargarUsuariosDropdown();
             cambiarUsuarioActivo(store.state.usuarioActivo);
@@ -2014,7 +2154,7 @@
         // --- CONTROL DE ROLES Y VISTAS ---
         function cambiarRol(rol) {
             store.state.rolActivo = rol;
-            
+
             // Paneles
             document.getElementById("panelAdmin").classList.remove("active");
             document.getElementById("panelCajero").classList.remove("active");
@@ -2032,28 +2172,68 @@
             renderizarTodo();
         }
 
-        function cambiarUsuarioActivo(val) {
-            store.state.usuarioActivo = val;
-            store.save();
-            
+        async function cambiarUsuarioActivo(val) {
+            let pin = "";
+            let tipo = "";
+            let nombre = "";
+
             if (val === 'admin') {
-                cambiarRol('admin');
+                pin = prompt("Introduce la contraseña de Administrador:");
+                tipo = 'admin';
+                nombre = 'admin';
             } else if (val.startsWith('cajero:')) {
-                const cajeroNombre = val.split(':')[1];
-                const sucursalId = store.state.sucursalActiva;
-                let turno = store.state.turnos.find(t => t.sucursalId === sucursalId && t.cajeroNombre === cajeroNombre && t.estado === 'abierto');
-                
-                cambiarRol('cajero');
-                
-                if (!turno) {
-                    document.getElementById("formTurnoCajero").value = cajeroNombre;
-                    document.getElementById("formTurnoCajero").disabled = true;
-                    document.getElementById("modalIniciarTurno").classList.add("open");
-                }
+                nombre = val.split(':')[1];
+                pin = prompt(`Introduce el PIN para el Cajero ${nombre}:`);
+                tipo = 'cajero';
             } else if (val.startsWith('empleado:')) {
-                cambiarRol('sector');
-                cargarCatalogoSector();
-                buscarPrecioSector("");
+                nombre = val.split(':')[1];
+                pin = prompt(`Introduce el PIN para el Empleado ${nombre}:`);
+                tipo = 'empleado';
+            }
+
+            if (pin === null) {
+                cargarUsuariosDropdown();
+                return;
+            }
+
+            try {
+                const authRes = await fetch('http://localhost:5000/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ tipo, nombre, pin })
+                }).then(r => r.json());
+
+                if (authRes.success) {
+                    store.state.usuarioActivo = val;
+                    store.save();
+                    await store.syncData();
+
+                    if (val === 'admin') {
+                        cambiarRol('admin');
+                    } else if (val.startsWith('cajero:')) {
+                        const cajeroNombre = val.split(':')[1];
+                        const sucursalId = store.state.sucursalActiva;
+                        let turno = store.state.turnos.find(t => t.sucursalId === sucursalId && t.cajeroNombre === cajeroNombre && t.estado === 'abierto');
+
+                        cambiarRol('cajero');
+
+                        if (!turno) {
+                            document.getElementById("formTurnoCajero").value = cajeroNombre;
+                            document.getElementById("formTurnoCajero").disabled = true;
+                            document.getElementById("modalIniciarTurno").classList.add("open");
+                        }
+                    } else if (val.startsWith('empleado:')) {
+                        cambiarRol('sector');
+                        cargarCatalogoSector();
+                        buscarPrecioSector("");
+                    }
+                } else {
+                    alert(authRes.message || "Código PIN incorrecto.");
+                    cargarUsuariosDropdown();
+                }
+            } catch (e) {
+                alert("Error al conectar con el servidor de autenticación.");
+                cargarUsuariosDropdown();
             }
         }
 
@@ -2099,18 +2279,18 @@
             store.state.sucursalActiva = parseInt(id);
             store.save();
             vaciarCarrito();
-            
+
             if (store.state.rolActivo === 'cajero') {
                 verificarYPedirAperturaTurno();
             }
-            
+
             renderizarTodo();
         }
 
         // --- RENDERIZACIÓN GENERAL DE LA APP ---
         function renderizarTodo() {
             lucide.createIcons();
-            
+
             // Actualizar selectores
             cargarSucursalesHeader();
 
@@ -2144,7 +2324,7 @@
 
             const ventasHoy = store.state.ventas.filter(v => v.sucursalId === sucursalId && new Date(v.fecha).toLocaleDateString() === hoy);
             const totalVentasHoy = ventasHoy.reduce((acc, v) => acc + v.total, 0);
-            
+
             const totalDeudas = store.state.clientes.reduce((acc, c) => acc + (c.saldo < 0 ? Math.abs(c.saldo) : 0), 0);
 
             // Obtener caja de la sucursal (efectivo acumulado en el turno abierto de la sucursal)
@@ -2180,7 +2360,7 @@
             filtroAuditoriaActivo = filtro;
             document.getElementById("btnTabTurnosActivos").classList.remove("active");
             document.getElementById("btnTabTurnosCerrados").classList.remove("active");
-            
+
             if (filtro === 'activos') {
                 document.getElementById("btnTabTurnosActivos").classList.add("active");
             } else {
@@ -2209,11 +2389,11 @@
             const blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), csvContent], { type: "text/csv;charset=utf-8;" });
             const link = document.createElement("a");
             const url = URL.createObjectURL(blob);
-            
+
             link.setAttribute("href", url);
-            link.setAttribute("download", `Auditoria_Cajas_${new Date().toISOString().slice(0,10)}.csv`);
+            link.setAttribute("download", `Auditoria_Cajas_${new Date().toISOString().slice(0, 10)}.csv`);
             link.style.visibility = 'hidden';
-            
+
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -2222,20 +2402,20 @@
         function renderizarTablaTurnos() {
             const tbody = document.querySelector("#tablaTurnos tbody");
             tbody.innerHTML = "";
-            
+
             let turnos = store.state.turnos;
-            
+
             if (filtroAuditoriaActivo === 'activos') {
                 turnos = turnos.filter(t => t.estado === 'abierto' || t.estado === 'congelado');
             } else {
                 turnos = turnos.filter(t => t.estado === 'auditado');
             }
-            
+
             if (turnos.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; color:var(--text-muted); padding:20px;">No hay turnos registrados en esta categoría.</td></tr>`;
                 return;
             }
-            
+
             turnos.forEach(t => {
                 const sucursal = store.state.sucursales.find(s => s.id === t.sucursalId);
                 const tr = document.createElement("tr");
@@ -2328,7 +2508,7 @@
             // CRUD PERSONAL (Cajeros y Empleados)
             const tPers = document.querySelector("#tablaCRUDPersonal tbody");
             tPers.innerHTML = "";
-            
+
             // Render Cajeros
             store.state.cajeros.forEach(c => {
                 const tr = document.createElement("tr");
@@ -2343,7 +2523,7 @@
                 `;
                 tPers.appendChild(tr);
             });
-            
+
             // Render Empleados
             store.state.empleados.forEach(e => {
                 const tr = document.createElement("tr");
@@ -2369,7 +2549,7 @@
             const hoy = new Date().toLocaleDateString();
 
             const ventasHoy = store.state.ventas.filter(v => v.sucursalId === sucursalId && new Date(v.fecha).toLocaleDateString() === hoy);
-            
+
             const totales = { efectivo: 0, virtual: 0, tarjeta: 0, corriente: 0 };
             ventasHoy.forEach(v => {
                 totales[v.metodoPago] += v.total;
@@ -2417,13 +2597,12 @@
         function verificarYPedirAperturaTurno() {
             const sucursalId = store.state.sucursalActiva;
             const turno = store.state.turnos.find(t => t.sucursalId === sucursalId && t.estado === 'abierto');
-            
             if (!turno) {
                 document.getElementById("modalIniciarTurno").classList.add("open");
             }
         }
 
-        function abrirTurnoCajaNuevo() {
+        async function abrirTurnoCajaNuevo() {
             const cajero = document.getElementById("formTurnoCajero").value.trim();
             const inicial = parseFloat(document.getElementById("formTurnoCajaInicial").value) || 0;
 
@@ -2432,34 +2611,28 @@
                 return;
             }
 
-            const nuevoTurno = {
-                id: store.state.turnos.length + 1,
-                sucursalId: store.state.sucursalActiva,
-                cajeroNombre: cajero,
-                inicio: new Date().toLocaleString(),
-                fin: "",
-                estado: 'abierto',
-                saldoInicial: inicial,
-                saldoEfectivoTeorico: inicial,
-                saldoVirtualTeorico: 0,
-                saldoTarjetaTeorico: 0,
-                saldoEfectivoReal: 0,
-                saldoVirtualReal: 0,
-                saldoTarjetaReal: 0,
-                discrepanciaEfectivo: 0,
-                notas: ""
-            };
+            try {
+                await fetch('http://localhost:5000/api/turnos/abrir', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sucursalId: store.state.sucursalActiva,
+                        cajeroNombre: cajero,
+                        saldoInicial: inicial
+                    })
+                }).then(r => r.json());
 
-            store.state.turnos.push(nuevoTurno);
-            store.save();
-            
-            document.getElementById("formTurnoCajero").value = "";
-            document.getElementById("formTurnoCajaInicial").value = "";
-            cerrarModales();
-            renderizarTodo();
+                await store.syncData();
+                document.getElementById("formTurnoCajero").value = "";
+                document.getElementById("formTurnoCajaInicial").value = "";
+                cerrarModales();
+                renderizarTodo();
+            } catch (e) {
+                alert("Error al abrir el turno en el servidor.");
+            }
         }
 
-        function congelarCajaTurnoActivo() {
+        async function congelarCajaTurnoActivo() {
             const sucursalId = store.state.sucursalActiva;
             const turno = store.state.turnos.find(t => t.sucursalId === sucursalId && t.estado === 'abierto');
 
@@ -2469,13 +2642,20 @@
             }
 
             if (confirm(`¿Estás seguro de congelar la caja del turno de ${turno.cajeroNombre}? Esto guardará los saldos teóricos actuales para auditoría.`)) {
-                turno.estado = 'congelado';
-                turno.fin = new Date().toLocaleString();
-                store.save();
-                
-                alert("La caja ha sido congelada. El sistema requerirá abrir un nuevo turno.");
-                document.getElementById("modalIniciarTurno").classList.add("open");
-                renderizarTodo();
+                try {
+                    await fetch('http://localhost:5000/api/turnos/congelar', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ id: turno.id })
+                    }).then(r => r.json());
+
+                    await store.syncData();
+                    alert("La caja ha sido congelada. El sistema requerirá abrir un nuevo turno.");
+                    document.getElementById("modalIniciarTurno").classList.add("open");
+                    renderizarTodo();
+                } catch (e) {
+                    alert("Error al congelar el turno en el servidor.");
+                }
             }
         }
 
@@ -2499,24 +2679,31 @@
                 document.getElementById("auditVirtualTeorico").textContent = formatearMoneda(t.saldoVirtualTeorico);
                 document.getElementById("auditTarjetaTeorico").textContent = formatearMoneda(t.saldoTarjetaTeorico);
                 document.getElementById("formAuditFisicoReal").value = t.saldoEfectivoTeorico; // Inicializar por defecto
-                
+
                 document.getElementById("modalAuditTurno").classList.add("open");
             }
         }
 
-        function guardarAuditoriaCierreFinal() {
-            const t = store.state.turnos.find(x => x.id === turnoIdAuditando);
+        async function guardarAuditoriaCierreFinal() {
             const realVal = parseFloat(document.getElementById("formAuditFisicoReal").value) || 0;
 
-            if (t) {
-                t.saldoEfectivoReal = realVal;
-                t.discrepanciaEfectivo = realVal - t.saldoEfectivoTeorico;
-                t.estado = 'auditado';
-                store.save();
-                
+            try {
+                const res = await fetch('http://localhost:5000/api/turnos/auditar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        id: turnoIdAuditando,
+                        saldoEfectivoReal: realVal,
+                        notes: "Cierre de arqueo aprobado"
+                    })
+                }).then(r => r.json());
+
+                await store.syncData();
                 cerrarModales();
                 renderizarTodo();
-                alert(`Arqueo guardado. Discrepancia/Descuadre calculado: ${formatearMoneda(t.discrepanciaEfectivo)}`);
+                alert(`Arqueo guardado. Discrepancia/Descuadre calculado: ${formatearMoneda(res.discrepancia)}`);
+            } catch (e) {
+                alert("Error al registrar la auditoría en el servidor.");
             }
         }
 
@@ -2532,7 +2719,7 @@
         function cargarCategoriasPOS() {
             const cont = document.getElementById("categoriasContenedor");
             cont.innerHTML = `<button class="category-tab active" onclick="filtrarCategoriaPOS(null)">Todos</button>`;
-            
+
             const sectores = [...new Set(store.state.inventario.map(p => p.sector))];
             sectores.forEach(s => {
                 const btn = document.createElement("button");
@@ -2546,11 +2733,11 @@
         let filtroCategoriaActiva = null;
         function filtrarCategoriaPOS(sector, elemento) {
             filtroCategoriaActiva = sector;
-            
+
             // Clases activas
             const tabs = document.querySelectorAll(".category-tab");
             tabs.forEach(t => t.classList.remove("active"));
-            
+
             if (elemento) {
                 elemento.classList.add("active");
             } else {
@@ -2563,7 +2750,7 @@
         let busquedaFiltroText = "";
         function filtrarProductos(val) {
             busquedaFiltroText = val.toLowerCase();
-            
+
             // Detección directa por código de barras
             const productoDirecto = store.state.inventario.find(p => p.codigo === val.trim());
             if (productoDirecto) {
@@ -2628,7 +2815,7 @@
         function seleccionarCliente(id) {
             clienteSeleccionadoId = parseInt(id);
             verificarLimiteCreditoCliente();
-            
+
             // Mostrar u ocultar botón de abono de deuda
             const c = store.state.clientes.find(x => x.id === clienteSeleccionadoId);
             const btnCobrarDeuda = document.getElementById("btnCobrarDeudaPOS");
@@ -2776,7 +2963,7 @@
         }
 
         // Procesar Transacción de Venta
-        function procesarVentaCaja() {
+        async function procesarVentaCaja() {
             if (carrito.length === 0) return;
 
             const sucursalId = store.state.sucursalActiva;
@@ -2797,37 +2984,49 @@
                     alert("No puedes fiar al Consumidor Final. Selecciona un cliente registrado.");
                     return;
                 }
-                cliente.saldo -= total;
-            } else {
-                // Registrar cobros en la caja del cajero
-                if (metodoPagoActivo === 'efectivo') turno.saldoEfectivoTeorico += total;
-                if (metodoPagoActivo === 'virtual') turno.saldoVirtualTeorico += total;
-                if (metodoPagoActivo === 'tarjeta') turno.saldoTarjetaTeorico += total;
             }
 
-            // Guardar registro de la venta
-            const nuevaVenta = {
-                id: store.state.ventas.length + 1,
-                sucursalId: sucursalId,
-                turnoId: turno.id,
-                fecha: new Date().toISOString(),
-                clienteId: cliente.id,
-                clienteNombre: cliente.nombre,
-                items: JSON.parse(JSON.stringify(carrito)),
-                total: total,
-                metodoPago: metodoPagoActivo,
-                estado: metodoPagoActivo === 'corriente' ? 'deuda' : 'cobrado'
-            };
+            try {
+                const res = await fetch('http://localhost:5000/api/ventas', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sucursalId: sucursalId,
+                        turnoId: turno.id,
+                        clienteId: cliente.id,
+                        total: total,
+                        metodoPago: metodoPagoActivo,
+                        estado: metodoPagoActivo === 'corriente' ? 'deuda' : 'cobrado',
+                        items: carrito
+                    })
+                }).then(r => r.json());
 
-            store.state.ventas.push(nuevaVenta);
-            store.save();
+                if (res.success) {
+                    const nuevaVenta = {
+                        id: res.ventaId,
+                        sucursalId: sucursalId,
+                        turnoId: turno.id,
+                        fecha: new Date().toISOString(),
+                        clienteId: cliente.id,
+                        clienteNombre: cliente.nombre,
+                        items: JSON.parse(JSON.stringify(carrito)),
+                        total: total,
+                        metodoPago: metodoPagoActivo,
+                        estado: metodoPagoActivo === 'corriente' ? 'deuda' : 'cobrado'
+                    };
 
-            // Guardar datos de impresión y abrir modal de ticket de 80mm
-            dispararTicketImpresoVisual(nuevaVenta);
-            
-            // Vaciar carrito
-            carrito = [];
-            renderizarTodo();
+                    await store.syncData();
+                    dispararTicketImpresoVisual(nuevaVenta);
+
+                    // Vaciar carrito
+                    carrito = [];
+                    renderizarTodo();
+                } else {
+                    alert("Error en el servidor al registrar la venta.");
+                }
+            } catch (e) {
+                alert("Error de conexión con el servidor al procesar la venta.");
+            }
         }
 
         // --- COLA DE TICKETS (SECTORES A CAJA) ---
@@ -2842,7 +3041,7 @@
         function actualizarBuzonTicketsSectores() {
             const sucursalId = store.state.sucursalActiva;
             const cajeroNombre = obtenerCajeroActivoNombre();
-            
+
             const panel = document.getElementById("sectorTicketsPanel");
             const container = document.getElementById("sectorTicketsContainer");
             const badge = document.getElementById("sectorTicketsCount");
@@ -2863,7 +3062,7 @@
             }
 
             panel.style.display = "flex";
-            
+
             // Globo flotante en selector
             const menuBadge = document.getElementById("cajaNotifBadge");
             menuBadge.style.display = "inline-block";
@@ -2891,18 +3090,26 @@
             lucide.createIcons();
         }
 
-        function cargarTicketSectorAlCarrito(id) {
+        async function cargarTicketSectorAlCarrito(id) {
             const ticket = store.state.colaTickets.find(t => t.id === id);
             if (ticket) {
                 ticket.items.forEach(item => {
                     agregarAlCarrito(item.productoId, item.cantidad);
                 });
-                
-                // Eliminar de la cola una vez cargado
-                store.state.colaTickets = store.state.colaTickets.filter(t => t.id !== id);
-                store.save();
-                actualizarBuzonTicketsSectores();
-                renderizarCarrito();
+
+                try {
+                    await fetch('http://localhost:5000/api/tickets/procesar', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ id: ticket.id })
+                    }).then(r => r.json());
+
+                    store.state.colaTickets = store.state.colaTickets.filter(t => t.id !== id);
+                    actualizarBuzonTicketsSectores();
+                    renderizarCarrito();
+                } catch (e) {
+                    alert("Error al procesar el ticket en el servidor.");
+                }
             }
         }
 
@@ -2930,19 +3137,19 @@
         function buscarPrecioSector(val) {
             const tbody = document.querySelector("#tablaPriceCheckerSector tbody");
             tbody.innerHTML = "";
-            
+
             const q = val.toLowerCase().trim();
             let productos = store.state.inventario;
-            
+
             if (q) {
                 productos = productos.filter(p => p.nombre.toLowerCase().includes(q) || p.codigo.includes(q));
             }
-            
+
             if (productos.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; color:var(--text-muted); padding:20px;">No se encontraron productos en catálogo.</td></tr>`;
                 return;
             }
-            
+
             productos.forEach(p => {
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
@@ -2959,10 +3166,10 @@
             const select = document.getElementById("formSectorDestinatarioCajero");
             if (!select) return;
             select.innerHTML = "";
-            
+
             const sucursalId = store.state.sucursalActiva;
             const turnosActivos = store.state.turnos.filter(t => t.sucursalId === sucursalId && t.estado === 'abierto');
-            
+
             if (turnosActivos.length === 0) {
                 const opt = document.createElement("option");
                 opt.value = "";
@@ -2970,7 +3177,7 @@
                 select.appendChild(opt);
                 return;
             }
-            
+
             turnosActivos.forEach(t => {
                 const opt = document.createElement("option");
                 opt.value = t.cajeroNombre;
@@ -3038,7 +3245,7 @@
             }
         }
 
-        function enviarTicketACaja() {
+        async function enviarTicketACaja() {
             if (!productoSeleccionadoSector) {
                 alert("Debes seleccionar un artículo antes de enviar el ticket.");
                 return;
@@ -3051,36 +3258,40 @@
             }
 
             const total = productoSeleccionadoSector.precio * pesoSimuladoBalanza;
-            const nuevoTicket = {
-                id: store.state.colaTickets.length + 1,
-                sucursalId: store.state.sucursalActiva,
-                cajeroNombre: destinatario,
-                sector: productoSeleccionadoSector.sector,
-                fecha: new Date().toISOString(),
-                items: [
-                    {
-                        productoId: productoSeleccionadoSector.id,
-                        nombre: productoSeleccionadoSector.nombre,
-                        precio: productoSeleccionadoSector.precio,
-                        cantidad: pesoSimuladoBalanza
-                    }
-                ],
-                total: total
-            };
+            const items = [
+                {
+                    productoId: productoSeleccionadoSector.id,
+                    nombre: productoSeleccionadoSector.nombre,
+                    precio: productoSeleccionadoSector.precio,
+                    cantidad: pesoSimuladoBalanza
+                }
+            ];
 
-            store.state.colaTickets.push(nuevoTicket);
-            store.save();
+            try {
+                await fetch('http://localhost:5000/api/tickets', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sucursalId: store.state.sucursalActiva,
+                        cajeroNombre: destinatario,
+                        sector: productoSeleccionadoSector.sector,
+                        total: total,
+                        items: items
+                    })
+                }).then(r => r.json());
 
-            alert(`Ticket enviado con éxito a la caja de ${destinatario} por un total de ${formatearMoneda(total)}.`);
-            
-            // Reiniciar balanza
-            productoSeleccionadoSector = null;
-            pesoSimuladoBalanza = 0.25;
-            document.getElementById("balanzaSlider").value = 0.25;
-            document.getElementById("balanzaPesoDisplay").textContent = "0.250";
-            actualizarBalanzaValores();
-            cargarCatalogoSector();
-            cargarSectorCajerosDestinatarios();
+                alert(`Ticket enviado con éxito a la caja de ${destinatario} por un total de ${formatearMoneda(total)}.`);
+
+                productoSeleccionadoSector = null;
+                pesoSimuladoBalanza = 0.25;
+                document.getElementById("balanzaSlider").value = 0.25;
+                document.getElementById("balanzaPesoDisplay").textContent = "0.250";
+                actualizarBalanzaValores();
+                cargarCatalogoSector();
+                cargarSectorCajerosDestinatarios();
+            } catch (e) {
+                alert("Error al enviar el ticket a la caja.");
+            }
         }
 
 
@@ -3155,7 +3366,7 @@
 
         // --- IMPRESIÓN Y DETALLE DE TICKETS (80MM Y WHATSAPP) ---
         let ticketVentaGuardadoPrint = null;
-        
+
         function dispararTicketImpresoVisual(venta) {
             ticketVentaGuardadoPrint = venta;
             const sucursal = store.state.sucursales.find(s => s.id === venta.sucursalId);
@@ -3165,7 +3376,7 @@
             document.getElementById("formWhatsAppNumber").value = cliente ? cliente.telefono : "";
 
             const cont = document.getElementById("ticketVisorPrint");
-            
+
             let desgloseItems = "";
             venta.items.forEach(x => {
                 const totalItem = x.precio * x.cantidad;
@@ -3252,10 +3463,10 @@
             msg += `📅 *Fecha:* ${new Date(v.fecha).toLocaleString()}\n`;
             msg += `👤 *Cliente:* ${v.clienteNombre}\n`;
             msg += `-----------------------------------\n`;
-            
+
             v.items.forEach(x => {
                 const cantStr = x.cantidad % 1 === 0 ? x.cantidad : x.cantidad.toFixed(3);
-                msg += `🔹 ${x.nombre} (${cantStr} x $${x.precio}) -> *$${(x.precio*x.cantidad).toFixed(2)}*\n`;
+                msg += `🔹 ${x.nombre} (${cantStr} x $${x.precio}) -> *$${(x.precio * x.cantidad).toFixed(2)}*\n`;
             });
 
             msg += `-----------------------------------\n`;
@@ -3310,7 +3521,7 @@
         function abrirModalCliente() { document.getElementById("modalCliente").classList.add("open"); }
         function abrirModalSucursal() { document.getElementById("modalSucursal").classList.add("open"); }
         function abrirModalPersonal() { document.getElementById("modalPersonal").classList.add("open"); }
-        
+
         function abrirModalQRBackup() {
             const container = document.getElementById("qrBackupPlaceholderContainer");
             container.innerHTML = "";
@@ -3360,7 +3571,7 @@
             document.getElementById("modalAuditTurno").classList.remove("open");
             document.getElementById("modalImpresionTicket").classList.remove("open");
             document.getElementById("modalQRBackup").classList.remove("open");
-            
+
             // Nuevos modals
             if (document.getElementById("modalCobroDeuda")) document.getElementById("modalCobroDeuda").classList.remove("open");
             if (document.getElementById("modalEscaner")) document.getElementById("modalEscaner").classList.remove("open");
@@ -3377,7 +3588,7 @@
             document.getElementById("cobroDeudaClientBalance").textContent = `Deuda Actual: ${formatearMoneda(Math.abs(c.saldo))}`;
             document.getElementById("formCobroDeudaMonto").value = Math.abs(c.saldo); // Rellenar con la deuda completa por defecto
             document.getElementById("formCobroDeudaMonto").max = Math.abs(c.saldo);
-            
+
             document.getElementById("modalCobroDeuda").classList.add("open");
         }
 
@@ -3403,7 +3614,7 @@
 
             // Registrar ingreso
             c.saldo += monto;
-            
+
             if (metodo === 'efectivo') turno.saldoEfectivoTeorico += monto;
             if (metodo === 'virtual') turno.saldoVirtualTeorico += monto;
             if (metodo === 'tarjeta') turno.saldoTarjetaTeorico += monto;
@@ -3434,7 +3645,7 @@
 
             alert(`Cobro registrado con éxito. Se abonaron ${formatearMoneda(monto)} a la cuenta de ${c.nombre}.`);
             cerrarModales();
-            
+
             // Actualizar vista
             seleccionarCliente(clienteSeleccionadoId);
             renderizarTodo();
@@ -3478,7 +3689,7 @@
                 oscillator.type = "sine";
                 oscillator.frequency.setValueAtTime(3200, audioCtx.currentTime); // Pitido agudo de lector láser
                 gainNode.gain.setValueAtTime(0.06, audioCtx.currentTime); // Volumen seguro
-                
+
                 oscillator.start();
                 gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
                 oscillator.stop(audioCtx.currentTime + 0.08);
@@ -3489,7 +3700,7 @@
 
         function simularEscaneoLaser(codigo) {
             reproducirSonidoBeep();
-            
+
             const prod = store.state.inventario.find(p => p.codigo === codigo);
             if (prod) {
                 agregarAlCarrito(prod.id);
@@ -3515,15 +3726,15 @@
             container.style.gap = "8px";
             container.style.pointerEvents = "none";
             container.style.animation = "floatUpFade 1.2s forwards";
-            
+
             container.innerHTML = `
                 <i data-lucide="check" style="width: 14px; height: 14px;"></i>
                 <span>${nombre} +1</span>
             `;
-            
+
             document.body.appendChild(container);
             lucide.createIcons();
-            
+
             setTimeout(() => {
                 container.remove();
             }, 1200);
@@ -3701,8 +3912,8 @@
         function importarBackupJSON(event) {
             const input = event.target;
             const reader = new FileReader();
-            
-            reader.onload = function(){
+
+            reader.onload = function () {
                 try {
                     const parsed = JSON.parse(reader.result);
                     if (parsed.sucursales && parsed.inventario && parsed.clientes) {
@@ -3713,11 +3924,11 @@
                     } else {
                         alert("Error: El archivo JSON seleccionado no tiene el formato correcto.");
                     }
-                } catch(e) {
+                } catch (e) {
                     alert("Error leyendo el archivo de copia de seguridad.");
                 }
             };
-            
+
             if (input.files[0]) {
                 reader.readAsText(input.files[0]);
             }
@@ -3730,4 +3941,5 @@
         }
     </script>
 </body>
+
 </html>
